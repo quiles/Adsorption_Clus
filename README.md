@@ -4,7 +4,7 @@ This repository provides the algorithms used in the paper "_Energy Decomposition
 
 ## Code for selecting representative (prototype) molecules:
 
-This algorithm uses the K-means clustering algorithm for selecting representative samples from a dataset of compounds. Both geometric-based features (eigen values of the Coulomb matrix) and external variables, such as energy, are considered as encoding features.
+This algorithm uses the K-means clustering algorithm for selecting representative samples from a dataset of compounds. In our experiments we taken both geometric-based features (eigenvalues of the Coulomb matrix) and external variables into account, albeit any descriptor might be used as input for the algorithm. 
 
 **Usage:**
 
