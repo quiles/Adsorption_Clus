@@ -22,7 +22,7 @@ This algorithm uses the K-means clustering algorithm for selecting representativ
 		
 		min_max: 0 - select samples with the lowest value, 1 - the largest
 
-** For more details, see the manuscript and support information **
+**For more details, see the manuscript and support information**
 
 
 ## Code for adsorption of two-atoms molecules on clusters
@@ -43,6 +43,6 @@ The adsorption algorithm consistis of two main steps: 1) distribution of the par
     	* 0 - atom closest to the surface (i.e. C)
     	* 1 - second atom (i.e. O)
 
-** For more details, see the manuscript and support information **
+**For more details, see the manuscript and support information**
 
 
