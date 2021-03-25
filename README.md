@@ -9,23 +9,40 @@ This algorithm uses the K-means clustering algorithm for selecting representativ
 **Usage:**
 
 * Option 1: Only structural information (xyz)
-	* $ python script1.py #samples folder_xyz_files
+	* $ python representative.py #samples folder_xyz_files
 * Option 2: Structural information (xyz) + extra data
-	* $ python script1.py #samples folder_xyz_files extra_data.txt
+	* $ python representative.py #samples folder_xyz_files extra_data.txt
 		
 		Obs. when loading extra data, the selection of representatives can be biased with an external variable (e.g. energy) to deliver the results. In this case, the variable must be informed. See Option 3
 
 * Option 3: Structural information (xyz) + extra data + biased selection
-	* python script1.py #samples folder_xyz_files extra_data.txt id_variable min_max
+	* python representative.py #samples folder_xyz_files extra_data.txt id_variable min_max
 		
 		id_variable indicates which column of extra_data is considered
+		
 		min_max: 0 - select samples with the lowest value, 1 - the largest
 
+** For more details, see the manuscript and support information **
 
 
+## Code for adsorption of two-atoms molecules on clusters
 
-### dasdads
+The adsorption algorithm consistis of two main steps: 1) distribution of the particles in a spherical surface; 2) deformation of the positions to fit to the cluster surface structure. The first part is responsible for positioning _n_ particles on the surface of a sphere. We start with _n_ particles randomly set over the surface and, by using a force-field-based approach, we optimize the position of all particles to maximize their shortest distances.
 
-- 1
-- 2
-- 3
+**Usage**
+
+* $ python adsorption.py xyz_cluster xyz_CO num_CO min_dist num_samples conection_type heterogeneity show3D
+    * xyz_cluster: XYZ file of the cluster
+    * xyz_CO: XYZ file of the CO molecule
+    * num_CO: number of molecules of CO
+    * min_dist: distance from CO to the cluster surface
+    * num_samples: number of generated structures
+    * heterogeneity: value between 0 and 1. [0 -> homogeneous distribution / 1 - random]
+    * show3D: 0 (no) / 1(yes)
+    conection_type: select which atom will interact with the cluster (two atoms only, e.g. CO)
+    	* 0 - atom closest to the surface (i.e. C)
+    	* 1 - second atom (i.e. O)
+
+** For more details, see the manuscript and support information **
+
+
